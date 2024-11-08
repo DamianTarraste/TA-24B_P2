@@ -1,6 +1,6 @@
 const questions = [
     {
-      question: "What does css?",
+      question: "In css we make?",
       options: ["main structure", "scripts", "style"],
       correct: "style"
     },
@@ -10,44 +10,44 @@ const questions = [
       correct: "fetch"
     },
     {
-        question: "Which command we use to read smth? Example to read list.",
+        question: "Which command sets or returns the value of the for attribute of a label",
         options: ["for", "else", "return"],
         correct: "for"
     },
     {
-        question: "What is boolean?",
+        question: "which value can boolean have?",
         options: ["JavaScript", "True/False", "Command"],
         correct: "True/False"
     },
     {
-        question: "What is str data?",
-        options: ["text", "text+numbers", "Lie"],
-        correct: "text"
+        question: "What is string data?",
+        options: ["text data", "text+numbers data", "False data"],
+        correct: "text data"
     },
     {
-        question: "What the difference between () and []?",
+        question: "What the difference between ( ) and [ ] in js?",
         options: ["str/bool", "True/False", "Method/Array"],
         correct: "Method/Array"
     },
     {
-        question: "Which symbols we use to make text from variable?",
+        question: "Which symbols we use to make text from any value?",
         options: ["Quotes", "Parentheses", "Comma"],
         correct: "Quotes"
     },
     {
         question: "When HTML first version was written?",
-        options: ["1993", "1999", "1992"],
+        options: ["1992", "1999", "1993"],
         correct: "1993"
     },
     {
-        question: "What does const mean?",
+        question: "What does const do?",
         options: ["Create lists and read them", "Defines a variable or pointer as unchangeable", "Turn on JavaScripts and CSS stylesheets"],
         correct: "Defines a variable or pointer as unchangeable"
     },
     {
-        question: "What does html?",
-        options: ["style", "scripts", "main_structure"],
-        correct: "Mars"
+        question: "In html we make?",
+        options: ["style", "scripts", "main structure"],
+        correct: "main structure"
     },
     
 
@@ -73,7 +73,7 @@ const questions = [
   // Check answer
   function checkAnswer(selectedAnswer) {
     if (selectedAnswer === questions[currentQuestionIndex].correct) {
-      score++;
+      score=score+1;
       document.getElementById("score").textContent = `Score: ${score}`;
     }
     // next question
@@ -87,17 +87,10 @@ const questions = [
   
   // End
   function endQuiz() {
-    document.querySelector(".quiz-container").innerHTML = `<h2>Your Score: ${score} + </h2>`;
+    document.querySelector(".quiz-container").innerHTML = `<h2>Your Score: ${score}/10 </h2>`;
   }
   
   // count of questions check
-  document.getElementById("next-btn").addEventListener("click", () => {
-    if (currentQuestionIndex < questions.length) {
-      loadQuestion();
-    } else {
-      endQuiz();
-    }
-  });
   
   // Load first question
   loadQuestion();
