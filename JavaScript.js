@@ -67,12 +67,12 @@ const questions = [
     {
       question: "Who is our teacher?",
       options: ["Leinu Lepp", "Krister", "Elon Mask"],
-      correct: "Kriister"
+      correct: "Krister"
     },
     {
       question: "Who is Damian?",
-      options: ["The most clever man in that world!", "Human", "Noob"],
-      correct: "The most clever man in that world!"
+      options: ["Reptile", "Human", "Noob"],
+      correct: "Reptile"
     },
     
 
@@ -103,7 +103,7 @@ const questions = [
       document.getElementById("score").textContent = `Score: ${score}`;
     }
     else {
-      document.getElementById("score").style.backgroundColor = "red"
+      document.getElementById("score").style.backgroundColor = "tomato"
     }
     // next question
     currentQuestionIndex++;
