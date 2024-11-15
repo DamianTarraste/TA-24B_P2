@@ -99,7 +99,11 @@ const questions = [
   function checkAnswer(selectedAnswer) {
     if (selectedAnswer === questions[currentQuestionIndex].correct) {
       score=score+1;
+      document.getElementById("score").style.backgroundColor = "lightgreen"
       document.getElementById("score").textContent = `Score: ${score}`;
+    }
+    else {
+      document.getElementById("score").style.backgroundColor = "red"
     }
     // next question
     currentQuestionIndex++;
@@ -118,3 +122,4 @@ const questions = [
   
   // Load first question
   loadQuestion();
+
