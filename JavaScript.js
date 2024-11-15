@@ -10,7 +10,7 @@ const questions = [
       correct: "fetch"
     },
     {
-        question: "Which command sets or returns the value of the for attribute of a label",
+        question: "That we use to read list?",
         options: ["for", "else", "return"],
         correct: "for"
     },
@@ -49,6 +49,31 @@ const questions = [
         options: ["style", "scripts", "main structure"],
         correct: "main structure"
     },
+    {
+      question: "Which language is most used at that moment(2024)?",
+      options: ["JavaScript", "Html/Css", "Python"],
+      correct: "JavaScript"
+    },
+    {
+      question: "What is event in js?",
+      options: ["Value define", "Cycle reader", "Signal of some action"],
+      correct: "Signal of some action"
+    },
+    {
+      question: "In js we make?",
+      options: ["style", "scripts", "main structure"],
+      correct: "scripts"
+    },
+    {
+      question: "Who is our teacher?",
+      options: ["Leinu Lepp", "Krister", "Elon Mask"],
+      correct: "Kriister"
+    },
+    {
+      question: "Who is Damian?",
+      options: ["The most clever man in that world!", "Human", "Noob"],
+      correct: "The most clever man in that world!"
+    },
     
 
   ];
@@ -60,10 +85,10 @@ const questions = [
     const questionElement = document.getElementById("question");
     const optionButtons = document.querySelectorAll(".option-btn");
   
-    // question text
+    // question text change
     questionElement.textContent = questions[currentQuestionIndex].question;
   
-    // answers text
+    // answers options text
     optionButtons.forEach((button, index) => {
       button.value = questions[currentQuestionIndex].options[index];
       button.onclick = () => checkAnswer(button.value);
@@ -87,10 +112,9 @@ const questions = [
   
   // End
   function endQuiz() {
-    document.querySelector(".quiz-container").innerHTML = `<h2>Your Score: ${score}/10 </h2>`;
+    document.querySelector(".quiz-container").innerHTML = `<h2>Your Score: ${score}/${questions.length} </h2>`;
   }
   
-  // count of questions check
   
   // Load first question
   loadQuestion();
