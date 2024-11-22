@@ -123,3 +123,11 @@ const questions = [
   // Load first question
   loadQuestion();
 
+
+
+  // Use that to create new  
+  // {
+  //   question: "(Question)",
+  //   options: ["(Answer1)", "(Answer2)", "(Answer3)"],
+  //   correct: "(Correct Answer option)"
+  // },
