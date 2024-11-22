@@ -114,13 +114,23 @@ const questions = [
     }
   }
   
+  const url = "https://kool.krister.ee/chat/WebCode_Quiz";
+
+
   // End
   function endQuiz() {
     document.querySelector(".quiz-container").innerHTML = `<h2>Your Score: ${score}/${questions.length} </h2>`;
+    const scores = score
+    const questionslenghts = questions.length
+    body: JSON.stringify({
+      score: scores + "/" + questionslenghts,
+      name: username
+    })
   }
   
   
   // Load first question
+  const username = prompt("what's your name?")
   loadQuestion();
 
 
